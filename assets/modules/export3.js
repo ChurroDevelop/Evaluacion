@@ -17,6 +17,5 @@ export let llenar = (n) => {
 }
 
 export let ordenar = function(...numeros){
-    numeros.sort(function(a,b){return b - a})
-    console.log(`Array ordenada: ${numeros}`);
+    console.table(numeros.sort(function(a,b){return b - a}));
 }
