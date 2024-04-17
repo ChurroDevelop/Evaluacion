@@ -69,39 +69,69 @@ else if(tarjeta === 2){
 else if (tarjeta === 3) {
     console.log("Has registrado Discover \n Recuerda que empieza con 6011 \n 16 Caracteres");
     for(;true;){
-        let numero = parseInt(prompt("Ingrese el numero de su tarjeta Discover"));
-        if (exp3.test(numero) === true) {
-            console.log("Se a validado su tarjeta Discover");
-            break;
-        }
-        else{
-            console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+        let numero = prompt("Ingrese el numero de su tarjeta Discover");
+        try {
+            if (isNaN(numero)) {
+                throw new Error("Caracteres no validos");
+            };
+            if (numero.length > 16) {
+                throw new Error ("No contiene los caracteres especificados");
+            }
+            if (exp3.test(numero) === true) {
+                console.log("Se a validado su tarjeta Discover");
+                break;
+            }
+            else{
+                console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+            }
+        } catch (error) {
+            alert(error.message);
         }
     }
 }
 else if (tarjeta === 4) {
     console.log("Has registrado Mastercard \n Recuerda que empieza desde el 51 hasta el 55 \n 16 Caracteres");
     for(;true;){
-        let numero = parseInt(prompt("Ingrese el numero de su tarjeta Mastercard"));
-        if (exp4.test(numero) === true) {
-            console.log("Se ha validado su tarjeta Mastercard");
-            break;
-        }
-        else{
-            console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+        let numero = prompt("Ingrese el numero de su tarjeta Mastercard");
+        try {
+            if (isNaN(numero)) {
+                throw new Error("Caracteres no validos");
+            };
+            if (numero.length > 16) {
+                throw new Error ("No contiene los caracteres especificados");
+            }
+            if (exp4.test(numero) === true) {
+                console.log("Se ha validado su tarjeta Mastercard");
+                break;
+            }
+            else{
+                console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+            }
+        } catch (error) {
+            alert(error.message);
         }
     }
 }
 else if (tarjeta === 5) {
     console.log("Has registrado Visa \n Recuerda que empieza con 4 \n 16 Caracteres");
     while(true){
-        let numero = parseInt(prompt("Ingrese el numero de su tarjeta Visa"));
-        if (exp5.test(numero) === true) {
-            console.log("Se a validad su tarjeta Visa");
-            break;
-        }
-        else{
-            console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+        let numero = prompt("Ingrese el numero de su tarjeta Visa");
+        try {
+            if (isNaN(numero)) {
+                throw new Error("Caracteres no validos");
+            };
+            if (numero.length > 16) {
+                throw new Error ("No contiene los caracteres especificados");
+            }
+            if (exp5.test(numero) === true) {
+                console.log("Se a validad su tarjeta Visa");
+                break;
+            }
+            else{
+                console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+            }
+        } catch (error) {
+            alert(error.message);
         }
     }
 }
