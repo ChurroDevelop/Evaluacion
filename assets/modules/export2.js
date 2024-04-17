@@ -20,6 +20,27 @@ export function sumar(...n){
     console.log(`El resultado de la suma es de ${suma} \n Numeros ${n}`)
 }
 
+// export function numerosPrimos(...n){
+//     console.log("Has entrado a la operacion de contar numeros primos");
+//     let primos = [];
+//     for (let i = 0; i < n.length; i++) {
+//         let primoInicio = true;
+//         let div = 2;
+//         let numero = n[i];
+//         while (div < numero) {
+//             if (numero % div === 0) {
+//                 primoInicio = false
+//                 break;
+//             }
+//             div++;
+//         }
+//         if (primoInicio) {
+//             primos.push(numero);
+//         }
+//     }
+//     console.log(`los numeros primos que se encontraron fueron \n Numeros Primos: ${primos}`);
+// }
+
 export function numerosPrimos(...n){
     console.log("Has entrado a la operacion de contar numeros primos");
     let primos = [];
@@ -34,7 +55,7 @@ export function numerosPrimos(...n){
             }
             div++;
         }
-        if (primoInicio) {
+        if (primoInicio && numero !== 1) {
             primos.push(numero);
         }
     }
