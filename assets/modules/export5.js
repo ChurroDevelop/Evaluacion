@@ -14,26 +14,26 @@ para que el usuario lo solucione y continue realizando los cálculos básicos
 de las matemáticas.
  */
 
-export class calculadora{
-    constructor(num1,num2){
+export class calculadora {
+    constructor(num1, num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
-    suma(num1,num2){
+    suma(num1, num2) {
         return num1 + num2;
     }
-    resta(num1,num2){
+    resta(num1, num2) {
         return num1 - num2;
     }
-    mult(num1,num2){
+    mult(num1, num2) {
         return num1 * num2;
     }
-    div(num1,num2){
+    div(num1, num2) {
         try {
             if (num1 === 0 || num2 === 0) {
                 throw new Error("No se puede hacer la division ya que contiene un 0");
             }
-            else{
+            else {
                 let division = num1 / num2;
                 return division;
             }

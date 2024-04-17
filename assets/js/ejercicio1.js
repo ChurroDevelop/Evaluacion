@@ -23,26 +23,46 @@ let tarjeta = parseInt(prompt("Ingrese el tipo de tarjeta \n 1. American Express
 if (tarjeta === 1) {
     console.log("Has registrado American Express \n Recuerda que empieza por 34-35-36-37 \n 15 Caracteres")
     for(;true;){
-        let numero = parseInt(prompt("Ingrese su numero de tarjeta American Express"));
-        if (exp1.test(numero) === true) {
-            console.log("Se ha verificado su tarjeta American Express");
-            break;
-        }
-        else{
-            console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+        let numero = prompt("Ingrese su numero de tarjeta American Express");
+        try {
+            if (isNaN(numero)) {
+                throw new Error("Caracteres no validos");
+            };
+            if (numero.length > 16) {
+                throw new Error ("No contiene los caracteres especificados");
+            }
+            if (exp1.test(numero) === true) {
+                console.log("Se ha verificado su tarjeta American Express");
+                break;
+            }
+            else{
+                console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+            }
+        } catch (error) {
+            alert(error.message);
         }
     }
 }
 else if(tarjeta === 2){
     console.log("Has registrado Diners Club \n Recuera que empieza desde el 301 hasta el 305 o del 36 al 38 \n 14 Caracteres");
     for(;true;){
-        let numero = parseInt(prompt("Ingrese el numero de su tarjeta Diners Club"));
-        if (exp2.test(numero) === true) {
-            console.log("Se ha validado su tarjeta Diners Club");
-            break;
-        }
-        else{
-            console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+        let numero = prompt("Ingrese el numero de su tarjeta Diners Club");
+        try {
+            if (isNaN(numero)) {
+                throw new Error("Caracteres no validos");
+            };
+            if (numero.length > 16) {
+                throw new Error ("No contiene los caracteres especificados");
+            }
+            if (exp2.test(numero) === true) {
+                console.log("Se ha validado su tarjeta Diners Club");
+                break;
+            }
+            else{
+                console.error("No se a detectado la tarjeta, vuelva a intentarlo");
+            }
+        } catch (error) {
+            alert(error.message)
         }
     }
 }

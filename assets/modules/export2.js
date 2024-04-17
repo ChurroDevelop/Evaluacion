@@ -90,7 +90,7 @@ export function promedioPrimos(...n){
             }
             div++;
         }
-        if (primoInicio) {
+        if (primoInicio && numero !== 1) {
             suma += numero;
             contPrimos++;
             primos.push(numero);

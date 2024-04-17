@@ -22,14 +22,14 @@ let a = parseFloat(prompt("Ingrese el valor del numero 1"));
 let b = parseFloat(prompt("Ingrese el valor del numero 2"));
 
 if (proceso === 1) {
-    console.log(`El resultado de la Suma es: ${operaciones.suma(a,b)}`);
+    console.log(`El resultado de la Suma es: ${operaciones.suma(a, b)}`);
 }
-else if(proceso === 2){
-    console.log(`El resultado de la Resta es: ${operaciones.resta(a,b)}`);
+else if (proceso === 2) {
+    console.log(`El resultado de la Resta es: ${operaciones.resta(a, b)}`);
 }
 else if (proceso === 3) {
-    console.log(`El resultado de la Multiplicacion es: ${operaciones.mult(a,b)}`);
+    console.log(`El resultado de la Multiplicacion es: ${operaciones.mult(a, b)}`);
 }
 else if (proceso === 4) {
-    console.log(`El resultado de la Division es: ${operaciones.div(a,b)}`)
+    console.log(`El resultado de la Division es: ${operaciones.div(a, b)}`)
 }
